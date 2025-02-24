@@ -3105,15 +3105,10 @@ This file is part of LifeViewer
 			}
 		}
 		this.cellPeriodNumCols = numCols;
-		
-		// define custom colours for subperiods up to 20 - work in progress
-		periodCols[this.popSubPeriod.length - 2] = "rgb(028,146,205)";
-		periodCols[this.popSubPeriod.length - 3] = "rgb(010,184,123)";
-		periodCols[this.popSubPeriod.length - 4] = "rgb(232,096,117)";
 
 		// make colours for the subperiods excluding period 1 and oscillator period
 		y = 0;
-		for (x = 5; x < this.popSubPeriod.length - 4; x += 1) {
+		for (x = 2; x < this.popSubPeriod.length - 1; x += 1) {
 			if (this.popSubPeriod[x] > 0) {
 				hue = Math.floor(360 * (y / numCols));
 				periodCols[x] = "hsl(" + hue + ",100%," + (70 - (y & 3) * 12) + "%)";
@@ -3125,6 +3120,11 @@ This file is part of LifeViewer
 		periodCols[0] = "black";
 		periodCols[1] = "rgb(168,168,168)";
 		periodCols[this.popSubPeriod.length - 4] = "rgb(255,255,255)";
+		
+		// define custom colours for subperiods up to 20 - work in progress
+		periodCols[this.popSubPeriod.length - 2] = "rgb(028,146,205)";
+		periodCols[this.popSubPeriod.length - 3] = "rgb(010,184,123)";
+		periodCols[this.popSubPeriod.length - 4] = "rgb(232,096,117)";
 
 		// create a colour for state 6 cells
 		if (this.cellPeriodState6) {
