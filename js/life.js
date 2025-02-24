@@ -3119,7 +3119,7 @@ This file is part of LifeViewer
 		// set colours for period 1 and oscillator period
 		periodCols[0] = "black";
 		periodCols[1] = "rgb(168,168,168)";
-		periodCols[this.popSubPeriod.length - 1] = "rgb(238,238,238)";
+		periodCols[this.popSubPeriod.length - 1] = "rgb(255,255,255)";
 
 		// create a colour for state 6 cells
 		if (this.cellPeriodState6) {
