@@ -3113,7 +3113,7 @@ This file is part of LifeViewer
 
 		// make colours for the subperiods excluding period 1 and oscillator period
 		y = 0;
-		for (x = 2; x < this.popSubPeriod.length - 4; x += 1) {
+		for (x = 5; x < this.popSubPeriod.length - 4; x += 1) {
 			if (this.popSubPeriod[x] > 0) {
 				hue = Math.floor(360 * (y / numCols));
 				periodCols[x] = "hsl(" + hue + ",100%," + (70 - (y & 3) * 12) + "%)";
